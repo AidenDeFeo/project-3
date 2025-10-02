@@ -1,0 +1,258 @@
+@media (max-width: 649px) {
+					section {
+						margin-top: 220px;
+					}
+}
+html, body {
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	box-sizing: border-box;
+}
+@media (min-width: 451px) and (max-width: 799px) {
+	.intel-subheading {
+		line-height: 1.7;
+	}
+}
+@media (max-width: 450px) {
+	.intel-heading {
+		font-size: 0.25em;
+		line-height: 1.01;
+	}
+	.intel-subheading {
+		font-size: 0.18em;
+		line-height: 1.7;
+		max-width: 95vw;
+	}
+}
+@media (min-width: 451px) {
+	.blue-box {
+		height: 50vh;
+	}
+}
+/* Tile image at the bottom of the top layer */
+.tile-img-bottom {
+	width: 92%;
+	height: 170px;
+	object-fit: cover;
+	border-radius: 0 0 8px 8px;
+	margin: 12px auto 0 auto;
+	display: block;
+	box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+}
+/* Tile image style */
+.tile-img {
+	width: 100%;
+	height: 80px;
+	object-fit: cover;
+	border-radius: 8px 8px 0 0;
+	margin-bottom: 8px;
+	display: block;
+}
+/* Tile two-layer hover effect */
+.tile {
+		position: relative;
+		overflow: hidden;
+		transition: transform 0.25s cubic-bezier(.4,2,.6,1);
+.tile:hover, .tile:focus-within {
+	transform: scale(1.08);
+	z-index: 2;
+}
+}
+.tile-top {
+	z-index: 1;
+	position: relative;
+	transition: opacity 0.3s;
+}
+/* Make tile bottom text larger */
+.tile-bottom {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 119, 204, 0.5); /* same blue as blue box, transparent */
+		color: #fff;
+		font-size: 1.18em;
+		font-weight: 600;
+		line-height: 1.5;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	opacity: 0;
+	pointer-events: none;
+	transition: opacity 0.3s;
+	padding: 16px;
+	box-sizing: border-box;
+	border-radius: 10px;
+	text-align: left;
+}
+.tile:hover .tile-bottom,
+.tile:focus-within .tile-bottom {
+	opacity: 1;
+	pointer-events: auto;
+}
+.tile:hover .tile-top,
+.tile:focus-within .tile-top {
+	opacity: 0;
+	pointer-events: none;
+}
+/* Contrasting blue horizontal line under heading */
+.intel-divider {
+	border: none;
+	height: 4px;
+	width: 80px;
+	background: #00aaff;
+	margin: 0.5em auto 1em auto;
+	border-radius: 2px;
+	box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+}
+@media (min-width: 800px) {
+	.intel-heading {
+		line-height: 1.4;
+	}
+	.intel-subheading {
+		line-height: 1.7;
+	}
+}
+/* Intel-style heading and subheading */
+.intel-heading {
+	font-family: 'Intel One', Arial, Helvetica, sans-serif;
+	color: #fff;
+	font-size: 2.5em;
+	font-weight: 900;
+	margin-bottom: 0.3em;
+	margin-top: 0.2em;
+	letter-spacing: 0.01em;
+	text-shadow: 0 2px 8px rgba(0,0,0,0.18);
+}
+.intel-subheading {
+	font-family: 'Intel One', Arial, Helvetica, sans-serif;
+	color: #fff;
+	font-size: 1.25em;
+	font-weight: 700;
+	max-width: 600px;
+	margin: 0 auto 1.5em auto;
+	text-shadow: 0 2px 8px rgba(0,0,0,0.18);
+}
+/* Center the timeline hint text */
+.timeline-hint {
+	text-align: center;
+	margin-top: 20px;
+	font-size: 1.05em;
+}
+/* Two columns for tiles on medium-small screens */
+@media (min-width: 651px) and (max-width: 799px) {
+		section {
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			gap: 24px;
+			justify-items: center;
+			align-items: start;
+			width: 100%;
+			max-width: 100vw;
+			padding: 30px 0;
+			margin-top: 40px;
+		}
+}
+/* Make tiles smaller on very small screens */
+@media (max-width: 450px) {
+	.tile {
+		width: 200px;
+		min-width: 200px;
+		max-width: 200px;
+	}
+}
+/* Arrange tiles in a row for large screens */
+@media (min-width: 800px) {
+			section {
+				display: flex;
+				flex-direction: row;
+				justify-content: flex-start;
+				align-items: flex-start;
+				flex-wrap: nowrap;
+				gap: 24px;
+				overflow-x: auto;
+				padding: 30px 0;
+				/* Show only 4 tiles at a time (4 * 300px + 3 * 24px gap) */
+				width: calc(4 * 300px + 3 * 24px);
+				max-width: 100vw;
+				margin: 90px auto 0 auto;
+				scroll-snap-type: x mandatory;
+			}
+			.tile {
+				min-width: 300px;
+				max-width: 300px;
+				flex: 0 0 auto;
+				scroll-snap-align: start;
+			}
+	.tile {
+		min-width: 300px;
+		max-width: 300px;
+		flex: 0 0 auto;
+	}
+}
+/* Centered Intel logo at the top */
+.logo-top-center {
+	width: 100vw;
+	text-align: center;
+	position: relative;
+	z-index: 2;
+	margin-top: 40px; /* Increased from 10px to 40px */
+	margin-bottom: 10px;
+}
+.logo-top-center img {
+	height: 60px;
+}
+/* Blue box covering full width and half height of the screen */
+.blue-box {
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			width: 100%;
+			height: 50vh;
+			background: linear-gradient(to right, #0099ff 0%, #005288 100%);
+			z-index: 0;
+			box-sizing: border-box;
+}
+
+/* Make blue box taller on small screens */
+@media (max-width: 649px) {
+	.blue-box {
+		height: 66.66vh;
+	}
+}
+
+/* Style for timeline tiles */
+.tile {
+	background: #f5faff;
+	border: 1px solid #b3c6e0;
+	border-radius: 10px;
+	padding: 16px;
+	margin: 16px auto;
+							width: 262px;
+							height: 260px;
+							max-width: none;
+							min-width: 262px;
+	box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+	text-align: left;
+}
+
+.tile h3 {
+	margin-top: 0;
+	color: #0057b7;
+}
+
+.tile h4 {
+	margin: 0 0 8px 0;
+	color: #333;
+	font-size: 1.1em;
+}
+
+					.tile {
+						min-width: 262px;
+						max-width: 262px;
+						height: 260px;
+						flex: 0 0 auto;
+					}
