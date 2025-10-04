@@ -1,3 +1,148 @@
+#subscribe-message {
+	width: 100%;
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+}
+/* Simple footer styles */
+.site-footer {
+	background: #005288;
+	color: #fff;
+	padding: 24px 0 16px 0;
+	text-align: center;
+	margin-top: 40px;
+}
+.footer-content {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 10px;
+}
+.footer-nav {
+	display: flex;
+	gap: 18px;
+}
+.footer-link {
+	color: #fff;
+	text-decoration: underline;
+	font-size: 1em;
+	transition: color 0.2s;
+}
+.footer-link:hover {
+	color: #00aaff;
+}
+@media (max-width: 760px) {
+	.center-vertical-section .card-title {
+		text-align: center;
+		width: 100%;
+		display: block;
+	}
+}
+.email-small {
+	width: 100%;
+	min-width: 180px;
+	max-width: 400px;
+	display: inline-block;
+	flex: 1 1 auto;
+
+}
+.input-group .subscribe-blue-btn {
+	border-radius: 8px 0 0 8px;
+	margin-right: 0;
+}
+/* Make the subscription form larger */
+.center-vertical-section .card {
+	padding: 32px 0;
+	font-size: 1.25em;
+}
+.center-vertical-section .form-control {
+		height: 56px;
+		font-size: 1.1em;
+		width: 100%;
+		min-width: 320px;
+		max-width: 100%;
+		margin-left: auto;
+		margin-right: auto;
+}
+.center-vertical-section .card-title {
+	font-size: 2em;
+	font-weight: 800;
+}
+/* Blue box style for subscribe button */
+.subscribe-blue-btn {
+	background: linear-gradient(to right, #0099ff 0%, #005288 100%);
+	color: #fff;
+	border: none;
+		font-size: 1.1em;
+		font-weight: 700;
+			border-radius: 999px;
+		padding: 0 24px;
+		height: 56px;
+    margin-left: 130px;
+    margin-top: 10px;
+		box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+		transition: background 0.2s;
+		white-space: nowrap;
+}
+.subscribe-blue-btn:hover, .subscribe-blue-btn:focus {
+	background: linear-gradient(to right, #005288 0%, #0099ff 100%);
+	color: #fff;
+}
+/* Center the subscription form vertically and horizontally on the page */
+.center-vertical-section {
+	min-height: 0vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+/* Simple 3-column layout for info-columns section */
+.info-columns {
+	display: flex;
+	justify-content: center;
+	align-items: stretch;
+	gap: 32px;
+	margin: 0px auto 0 auto;
+	margin: 0 auto;
+	max-width: 1100px;
+	width: 100%;
+}
+.info-column {
+	background: #f5faff;
+	border: 1px solid #b3c6e0;
+	border-radius: 10px;
+	padding: 24px 18px;
+	flex: 1 1 0;
+	min-width: 220px;
+	max-width: 340px;
+	box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+	text-align: center;
+}
+.info-column h2 {
+	margin-top: 0;
+	color: #0057b7;
+	font-size: 1.3em;
+}
+.info-column .learn-more {
+	display: inline-block;
+	margin-top: 12px;
+	color: #007bff;
+	text-decoration: underline;
+	font-weight: 600;
+	font-size: 1em;
+}
+
+/* Responsive: stack columns on small screens */
+@media (max-width: 900px) {
+	.info-columns {
+		flex-direction: column;
+		align-items: center;
+		gap: 24px;
+	}
+	.info-column {
+		max-width: 95vw;
+	}
+}
 @media (max-width: 649px) {
 					section {
 						margin-top: 220px;
@@ -152,7 +297,6 @@ html, body {
 			width: 100%;
 			max-width: 100vw;
 			padding: 30px 0;
-			margin-top: 40px;
 		}
 }
 /* Make tiles smaller on very small screens */
